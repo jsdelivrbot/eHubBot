@@ -106,7 +106,7 @@ module.exports = function (controller) {
           // reply with a strikethrough message...
           bot.reply(message, '~' + item + '~');
 
-          controller.storage.users.delete(user, function (err, deleted) {
+          controller.storage.users.delete(item, function (err, deleted) {
             if (err) {
               bot.reply(message, 'I experienced an error deleting your task: ' + err);
             }
